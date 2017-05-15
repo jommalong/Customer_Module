@@ -12,6 +12,7 @@
       $btag = '<span>You searched for <i>';
       $etag = '<br></i></span>';
       $output = '';
+      $output2 = '';
     ?>
     <!-- Content Header (Page header) -->
     <section class="content-header">
@@ -27,12 +28,12 @@
               $searchq = $_POST['find'];
               $searchq = preg_replace("#[^0-9a-z]#i", "", $searchq);
 
-              $query = mysqli_query($connect, "SELECT * FROM `service provider` WHERE lname LIKE '%$searchq%' OR fname LIKE '%$searchq%'", MYSQLI_STORE_RESULT) or die("Could not search");
+              $query1 = mysqli_query($connect, "SELECT * FROM `service provider` WHERE lname LIKE '%$searchq%' OR fname LIKE '%$searchq%'", MYSQLI_STORE_RESULT) or die("Could not search");
               $count = mysqli_num_rows($query);
               if ($count == 0) {
                 $output = 'No results found';
               } else {
-                while($row = mysqli_fetch_array($query)) {
+                while($row = mysqli_fetch_array($query1)) {
                   $firstname = $row['fname'];
                   $lastname = $row['lname'];
                   $id = $row['sp_id'];
@@ -41,7 +42,28 @@
                 }
               }
               }
+              echo "<h2>Providers</h2>";
               print("$output");
+              echo "<h2>Services</h2>";
+
+              if(isset($_POST['search'])) {
+              $searchq = $_POST['search'];
+              $searchq = preg_replace("#[^0-9a-z]#i", "", $searchq);
+
+              $query2 = mysqli_query($connect, "SELECT * FROM services WHERE service_name LIKE '%$searchq%' OR description LIKE '%$searchq%'", MYSQLI_STORE_RESULT) or die("Could not search");
+              $count = mysqli_num_rows($query2);
+              if ($count == 0) {
+                $output2 = 'No results found';
+              } else {
+                while($row = mysqli_fetch_array($query2)) {
+                  $service = $row['service_name'];
+                  $description = $row['description'];
+                  $id = $row['service_id'];
+
+                  $output2 .= '<div> '.$service.' '.$description.'</div>';
+                }
+              }
+              }
             ?>
     </section>
     <!-- /.content -->

@@ -22,10 +22,10 @@
           <a href="#"><i class="fa fa-circle-o"></i><span>Dashboard</span></a>
         </li>
   		  <li class="treeview">
-    		  <a href="index.php"><i class="fa fa-circle-o"></i> <span>Home</span></a>
+    		  <a href="index.php"><i class="fa fa-home"></i> <span>Home</span></a>
         </li>
         <li class="treeview">
-          <a href="#"><i class="fa fa-circle-o"></i> <span>Services</span>
+          <a href="#"><i class="fa fa-info-circle"></i> <span>Services</span>
           <span class="pull-right-container">
             <i class="fa fa-angle-left pull-right"></i>
           </span>
@@ -38,7 +38,7 @@
                 <li><a href="tailoring.php">Tailoring</a></li>
           </ul>
         </li>
-        <li class="active"><a href="transactions.php"><i class="fa fa-circle-o"></i> <span>Transactions</span></a></li>
+        <li class="active"><a href="transactions.php"><i class="fa fa-bitcoin"></i> <span>Transactions</span></a></li>
         <li class="active"><a href="pending.php"><i class="fa fa-circle-o"></i> <span>Pending Requests</span></a></li>
         <li class="active"><a href="accepted.php"><i class="fa fa-circle-o"></i> <span>Accepted Requests</span></a></li>
         <li class="active"><a href="rejected.php"><i class="fa fa-circle-o"></i> <span>Rejected Requests</span></a></li>
