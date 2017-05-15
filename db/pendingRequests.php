@@ -12,7 +12,7 @@ function pendingRequests($id){
 	    die("Connection failed: " . $conn->connect_error);
 	} 
 
-	$sql = "select lname,fname,username, services.service_name, requests.date from `service provider` inner join requests on `service provider`.sp_id = requests.sp_id inner join services on services.service_id = requests.service_id where requests.status = 'Pending' and requests.cu_id = $id";
+	$sql = "select lname,fname,username, services.service_name, requests.date from `service provider` inner join requests on `service provider`.sp_id = requests.sp_id inner join services on services.service_id = requests.service_id where requests.status = 'Pending' and requests.cu_id";
 	$result = $conn->query($sql);
 
 	// if ($result->num_rows > 0) {
