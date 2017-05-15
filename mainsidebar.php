@@ -27,17 +27,34 @@
             <li class="treeview">
                 <a href="services.php"><i class="fa fa-info-circle"></i> <span>Services</span>
 
+
+                    <!-- Sidebar Menu -->
+                    <ul class="sidebar-menu">
+                        <li class="header">HEADER</li>
+                        <!-- Optionally, you can add icons to the links -->
+
+                        <li class="treeview">
+                            <a href="index.php"><i class="fa fa-home"></i> <span>Home</span></a>
+                        </li>
+                        <li class="treeview">
+                            <a href="#"><i class="fa fa-info-circle"></i> <span>Services</span>
+                                <span class="pull-right-container">
+            <i class="fa fa-angle-left pull-right"></i>
           </span>
-                </a>
-                <ul class="treeview-menu">
-                </ul>
-            </li>
-            <li class=""><a href="transactions.php"><i class="fa fa-bitcoin"></i> <span>Transactions</span></a></li>
-            <li class=""><a href="pending.php"><i class="fa fa-circle-o"></i> <span>Pending Requests</span></a></li>
-            <li class=""><a href="accepted.php"><i class="fa fa-circle-o"></i> <span>Accepted Requests</span></a></li>
-            <li class=""><a href="rejected.php"><i class="fa fa-circle-o"></i> <span>Rejected Requests</span></a></li>
-        </ul>
-        <!-- /.sidebar-menu -->
+                            </a>
+                            <ul class="treeview-menu">
+                            </ul>
+                        </li>
+                        <li class=""><a href="transactions.php"><i class="fa fa-bitcoin"></i> <span>Transactions</span></a>
+                        </li>
+                        <li class=""><a href="pending.php"><i class="fa fa-circle-o"></i> <span>Pending Requests</span></a>
+                        </li>
+                        <li class=""><a href="accepted.php"><i class="fa fa-circle-o"></i>
+                                <span>Accepted Requests</span></a></li>
+                        <li class=""><a href="rejected.php"><i class="fa fa-circle-o"></i>
+                                <span>Rejected Requests</span></a></li>
+                    </ul>
+                    <!-- /.sidebar-menu -->
     </section>
     <!-- /.sidebar -->
 </aside>
