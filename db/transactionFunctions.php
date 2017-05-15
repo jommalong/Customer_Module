@@ -30,7 +30,7 @@ NATURAL JOIN
 WHERE
     status = 'approved'
         
-AND customer.username = $id;"
+AND customer.username = $id";
     $result = $conn->query($sql);
 
     // if ($result->num_rows > 0) {

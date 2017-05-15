@@ -112,9 +112,10 @@
 
 
 </script>
-<!-- Optionally, you can add Slimscroll and FastClick plugins.
-     Both of these plugins are recommended to enhance the
-     user experience. Slimscroll is required when using the
-     fixed layout. -->
+<!--slideshow scripts -->
+    <!--scripts starts here -->
+    <script type="text/javascript" src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="js/slickscript.js"></script>
+    <script type="text/javascript" src="js/slick/slick.js"></script>
 </body>
 </html>
