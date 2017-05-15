@@ -39,6 +39,9 @@
           </ul>
         </li>
         <li class="active"><a href="transactions.php"><i class="fa fa-circle-o"></i> <span>Transactions</span></a></li>
+        <li class="active"><a href="pending.php"><i class="fa fa-circle-o"></i> <span>Pending Requests</span></a></li>
+        <li class="active"><a href="accepted.php"><i class="fa fa-circle-o"></i> <span>Accepted Requests</span></a></li>
+        <li class="active"><a href="rejected.php"><i class="fa fa-circle-o"></i> <span>Rejected Requests</span></a></li>
       </ul>
       <!-- /.sidebar-menu -->
     </section>
