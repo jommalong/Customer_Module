@@ -44,7 +44,7 @@ function getServices($id)
         die("Connection failed: " . $conn->connect_error);
     }
 
-    $sql = "SELECT * FROM `services` INNER JOIN arrangement on services.service_id = arrangement.service_id INNER JOIN `service provider` on arrangement.sp_id = `service provider`.`sp_id`";
+    $sql = "SELECT * FROM `services` INNER JOIN `service provider` on services.sp_id = `service provider`.sp_id";
     $result = $conn->query($sql);
 
     // if ($result->num_rows > 0) {

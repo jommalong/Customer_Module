@@ -27,6 +27,7 @@
         <table class="table table-hover data-table">
             <thead>
             <tr>
+                <th>Service Id</th>
                 <th>Service Name</th>
                 <th>Description</th>
                 <th>Provider First Name</th>
@@ -43,6 +44,7 @@
 
             <?php while ($row = $result->fetch_assoc()): ?>
                 <tr>
+                    <td><?php echo $row['service_id'] ?></td>
                     <td><?php echo $row['service_name'] ?></td>
                     <td><?php echo $row['description'] ?></td>
                     <td><?php echo $row['fname'] ?></td>
@@ -54,7 +56,7 @@
                     <td>
                         <form action="submit_request.php" method="post">
                             <input type="hidden" name="sp_id" value="<?php echo $row['sp_id'] ?>">
-                            <input type="hidden" name="cu_id" value="<?php echo $row['cu_id'] ?>">
+                            <input type="hidden" name="cu_id" value="<?php echo $cu_id ?>">
                             <input type="hidden" name="service_id" value="<?php echo $row['service_id'] ?>">
                             <input type="hidden" name="date" value="<?php echo date('Y-m-d') ?>">
                             <input type="hidden" name="status" value="Pending">
