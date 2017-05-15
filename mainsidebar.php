@@ -18,6 +18,9 @@
       <ul class="sidebar-menu">
         <li class="header">HEADER</li>
         <!-- Optionally, you can add icons to the links -->
+        <li class="treeview">
+          <a href="#"><i class="fa fa-circle-o"></i><span>Dashboard</span></a>
+        </li>
   		  <li class="treeview">
     		  <a href="index.php"><i class="fa fa-circle-o"></i> <span>Home</span></a>
         </li>
