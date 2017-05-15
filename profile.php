@@ -48,10 +48,10 @@
                 
                 <form>
                 <div class="col-md-6">
-                  <input type="radio" name="gender" value="Male">Male
+                  <input type="radio" name="gender" value="m" checked>Male
                 </div>
                 <div class="col-md-6">
-                  <input type="radio" name="gender" value="Female">Female
+                  <input type="radio" name="gender" value="f">Female
                 </div>
                 
               </form>
@@ -67,6 +67,11 @@
             <div class="col-md-6">
               <label for="pw">Password</label>
               <input type="password" class="form-control" name="pw" placeholder="Password">
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-4 col-md-offset-4">
+              <input type="submit" class="btn btn-primary form-control" name="submit" value="Update profile">
             </div>
           </div>
         </div>

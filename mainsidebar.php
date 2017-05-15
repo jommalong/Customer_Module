@@ -3,9 +3,9 @@
     <!-- sidebar: style can be found in sidebar.less -->
     <section class="sidebar">
       <!-- search form (Optional) -->
-      <form action="#" method="post" class="sidebar-form">
+      <form action="results.php" method="post" class="sidebar-form">
         <div class="input-group">
-          <input type="text" name="q" class="form-control" placeholder="Search...">
+          <input type="text" name="find" class="form-control" placeholder="Search..." id="Search">
               <span class="input-group-btn">
                 <button type="submit" name="search" id="search-btn" class="btn btn-flat"><i class="fa fa-search"></i>
                 </button>
@@ -35,7 +35,7 @@
                 <li><a href="tailoring.php">Tailoring</a></li>
           </ul>
         </li>
-        <li class="active"><a href="#"><i class="fa fa-circle-o"></i> <span>Transactions</span></a></li>
+        <li class="active"><a href="transactions.php"><i class="fa fa-circle-o"></i> <span>Transactions</span></a></li>
       </ul>
       <!-- /.sidebar-menu -->
     </section>
