@@ -12,7 +12,7 @@ function rejectedRequests($id){
 	    die("Connection failed: " . $conn->connect_error);
 	} 
 
-	$sql = "select lname,fname,username, services.service_name, requests.date from `service provider` inner join requests on `service provider`.sp_id = requests.sp_id inner join services on services.service_id = requests.service_id where requests.status = 'Rejected' and requests.cu_id = $id";
+	$sql = "Select * from `requests` inner join `service provider` on requests.sp_id = `service provider`.sp_id inner join `services` on requests.service_id = services.service_id where requests.status = 'Rejected' and cu_id = 101";
 	$result = $conn->query($sql);
 
 	// if ($result->num_rows > 0) {

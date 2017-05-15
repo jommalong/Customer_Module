@@ -13,7 +13,24 @@ function getTransactions($id)
         die("Connection failed: " . $conn->connect_error);
     }
 
-    $sql = "SELECT * FROM invoice INNER JOIN `service provider` ON invoice.sp_id = `service provider`.sp_id WHERE cu_id = $id;";
+    $sql = "SELECT 
+    COUNT(status) 'Number of Accepted Requests',
+    
+CONCAT(`service provider`.fname,
+            `service provider`.lname) 'Service Provider'
+
+FROM
+    requests
+        NATURAL JOIN
+    customer
+        
+NATURAL JOIN
+    `service provider`
+
+WHERE
+    status = 'approved'
+        
+AND customer.username = $id;"
     $result = $conn->query($sql);
 
     // if ($result->num_rows > 0) {

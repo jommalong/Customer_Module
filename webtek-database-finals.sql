@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: May 10, 2017 at 10:43 AM
+-- Generation Time: May 15, 2017 at 06:28 AM
 -- Server version: 5.7.14
 -- PHP Version: 7.0.10
 
@@ -31,25 +31,25 @@ CREATE TABLE `arrangement` (
   `cu_id` int(11) NOT NULL,
   `sp_id` int(11) NOT NULL,
   `service_id` int(11) NOT NULL,
-  `status` varchar(45) NOT NULL,
-  `payment_type` varchar(45) NOT NULL
+  `date` datetime NOT NULL,
+  `payment_type` enum('Online','Meet-up') NOT NULL DEFAULT 'Online'
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `arrangement`
 --
 
-INSERT INTO `arrangement` (`arrangement_id`, `cu_id`, `sp_id`, `service_id`, `status`, `payment_type`) VALUES
-(7001, 101, 201, 501, 'Ongoing', 'Meet-up'),
-(7002, 102, 203, 501, 'Done', 'Meet-up'),
-(7003, 104, 204, 501, 'Ongoing', 'Meet-up'),
-(7004, 106, 205, 503, 'Ongoing', 'Online'),
-(7005, 107, 207, 504, 'Ongoing', 'Meet-up'),
-(7006, 108, 209, 505, 'Done', 'Online'),
-(7007, 110, 210, 505, 'Done', 'Meet-up'),
-(7008, 104, 203, 502, 'Ongoing', 'Meet-up'),
-(7009, 106, 209, 504, 'Ongoing', 'Online'),
-(7010, 101, 205, 502, 'Done', 'Meet-up');
+INSERT INTO `arrangement` (`arrangement_id`, `cu_id`, `sp_id`, `service_id`, `date`, `payment_type`) VALUES
+(7001, 101, 201, 501, '2017-05-06 01:45:00', 'Online'),
+(7002, 102, 203, 501, '2017-05-15 10:30:00', 'Meet-up'),
+(7003, 104, 204, 501, '2017-06-02 02:30:00', 'Meet-up'),
+(7004, 106, 205, 503, '2017-05-01 09:30:00', 'Meet-up'),
+(7005, 107, 207, 504, '2017-07-07 04:00:00', 'Online'),
+(7006, 108, 209, 505, '2017-05-06 01:45:00', 'Online'),
+(7007, 110, 210, 505, '2017-05-15 10:30:00', 'Online'),
+(7008, 104, 203, 502, '2017-06-02 02:30:00', 'Meet-up'),
+(7009, 106, 209, 504, '2017-05-01 09:30:00', 'Meet-up'),
+(7010, 101, 205, 502, '2017-06-07 04:00:00', 'Meet-up');
 
 -- --------------------------------------------------------
 
@@ -84,7 +84,9 @@ INSERT INTO `customer` (`cu_id`, `lname`, `fname`, `Address`, `email_address`, `
 (110, 'Santiago', 'Kimberly', '#76 Baguio City, Philippines', 'kimkim@yahoo.com', '444385', '1985-02-03', 'Kim', '*********', 'f'),
 (111, 'asda', 'first', 'asasd', 'asd@emial.com', '8234123', '2017-05-11', 'Valid', '123', 'm'),
 (112, 'asda', 'first', 'asasd', 'asd@emial.com', '8234123', '2017-05-11', 'Valid', '123', 'm'),
-(113, 'asda', 'first', 'asasd', 'asd@emial.com', '8234123', '2017-05-11', 'Valid', '123', 'm');
+(113, 'asda', 'first', 'asasd', 'asd@emial.com', '8234123', '2017-05-11', 'Valid', '123', 'm'),
+(114, 'ggsgr', 'wegwrg', 'gsgfbsgourg', 'wgwgwg@yahoo.com', '06465649', '2018-03-02', 'gwsg', 'password', 'f'),
+(115, 'Cabildo', 'Joy', '123 2123 Baguio city', 'jc@jc.com', '9820012321', '2017-05-17', 'customer1', 'password', 'f');
 
 -- --------------------------------------------------------
 
@@ -164,7 +166,8 @@ INSERT INTO `registration` (`reg_id`, `lname`, `fname`, `type`, `email_address`,
 (1023, NULL, NULL, 'Service Provider', NULL, 'Registered', 'abc', NULL, NULL, 'f', NULL, 'warrior'),
 (1024, 'last', 'fn', 'Customer', 'emai@g.com', 'Registered', '123', '132ads', '1231412', 'm', '2017-05-01', 'usernam'),
 (1025, 'last', 'fn', 'Customer', 'emai@g.com', 'Registered', '123', '132ads', '1231412', 'm', '2017-05-01', 'usernam'),
-(1026, 'last', 'fn', 'Customer', 'emai@g.com', 'Registered', '123', '132ads', '1231412', 'm', '2017-05-01', 'usernam');
+(1026, 'last', 'fn', 'Customer', 'emai@g.com', 'Registered', '123', '132ads', '1231412', 'm', '2017-05-01', 'usernam'),
+(1028, 'Cruz', 'Juan ', 'Customer', 'Juan@yahoo.com', 'Pending', 'password', '#77 HolyGhost Baguio  Benguet Philippines', '09053983127', 'm', '2017-05-03', 'Juan_C');
 
 -- --------------------------------------------------------
 
@@ -177,19 +180,23 @@ CREATE TABLE `requests` (
   `sp_id` int(11) NOT NULL,
   `cu_id` int(11) NOT NULL,
   `service_id` int(11) NOT NULL,
-  `date` datetime NOT NULL
+  `date` datetime NOT NULL,
+  `status` enum('Pending','Approved','Rejected') NOT NULL DEFAULT 'Pending'
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `requests`
 --
 
-INSERT INTO `requests` (`req_id`, `sp_id`, `cu_id`, `service_id`, `date`) VALUES
-(8001, 209, 101, 502, '2017-05-06 01:45:00'),
-(8002, 207, 107, 505, '2017-05-15 10:30:00'),
-(8003, 210, 110, 503, '2017-06-02 02:30:00'),
-(8004, 209, 104, 504, '2017-05-01 09:30:00'),
-(8005, 207, 106, 501, '2017-07-07 04:00:00');
+INSERT INTO `requests` (`req_id`, `sp_id`, `cu_id`, `service_id`, `date`, `status`) VALUES
+(8001, 209, 101, 502, '2017-05-06 01:45:00', 'Pending'),
+(8002, 207, 107, 505, '2017-05-15 10:30:00', 'Pending'),
+(8003, 210, 110, 503, '2017-06-02 02:30:00', 'Pending'),
+(8004, 209, 104, 504, '2017-05-01 09:30:00', 'Pending'),
+(8005, 207, 106, 501, '2017-07-07 04:00:00', 'Approved'),
+(8006, 207, 107, 504, '2017-05-15 00:00:00', 'Pending'),
+(8007, 207, 107, 504, '2017-05-15 00:00:00', 'Pending'),
+(8008, 209, 106, 504, '2017-05-15 00:00:00', 'Pending');
 
 -- --------------------------------------------------------
 
@@ -224,7 +231,8 @@ INSERT INTO `service provider` (`sp_id`, `lname`, `fname`, `address`, `tel_no`, 
 (210, 'Langit', 'Angelo', '#90 Kalangitan City, Philippines', '345342', 'AngelSky@yahoo.com', '********', '1986-10-05', 'Active', 'm'),
 (211, 'asdas', 'asda', 'aasdas', '12314512', 'asdasa@gas.com', '123', '2017-05-03', 'provider1', 'm'),
 (212, 'last', 'fn', '132ads', '1231412', 'emai@g.com', '1512312', '2017-05-08', 'userworking', 'm'),
-(213, 'Espiritus', 'Chris', '1281 Birkhall Drive', '6787361712', 'christopheredrian@gmail.com', 'password', '1995-06-05', 'Usernamekoto', 'm');
+(213, 'Espiritus', 'Chris', '1281 Birkhall Drive', '6787361712', 'christopheredrian@gmail.com', 'password', '1995-06-05', 'Usernamekoto', 'm'),
+(214, 'Lagman', 'Edward', '123 sapienta mode', '09512321232', 'prov2@gmail.com', 'password', '2016-02-09', 'provider2', 'm');
 
 -- --------------------------------------------------------
 
@@ -235,6 +243,7 @@ INSERT INTO `service provider` (`sp_id`, `lname`, `fname`, `address`, `tel_no`, 
 CREATE TABLE `services` (
   `service_id` int(11) NOT NULL,
   `service_name` varchar(45) NOT NULL,
+  `description` text NOT NULL,
   `price` double NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
@@ -242,12 +251,12 @@ CREATE TABLE `services` (
 -- Dumping data for table `services`
 --
 
-INSERT INTO `services` (`service_id`, `service_name`, `price`) VALUES
-(501, 'Photography', 450),
-(502, 'Gardening', 980),
-(503, 'Design', 375),
-(504, 'Tailoring', 785),
-(505, 'Cooking', 545);
+INSERT INTO `services` (`service_id`, `service_name`, `description`, `price`) VALUES
+(501, 'Photography', 'Lessons about photo editing, background, camera techniques.', 450),
+(502, 'Gardening', 'Lessons about growing plants, knowing what types of plants in seasons.', 980),
+(503, 'Design', 'Lessons about interior designing, and artistry and many more...', 375),
+(504, 'Tailoring', 'Lessons about basic repair, embroidery and designing clothes...', 785),
+(505, 'Cooking', 'Lessons about what you can do in the kitchen and techniques in cooking...', 545);
 
 --
 -- Indexes for dumped tables
@@ -319,7 +328,7 @@ ALTER TABLE `arrangement`
 -- AUTO_INCREMENT for table `customer`
 --
 ALTER TABLE `customer`
-  MODIFY `cu_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=114;
+  MODIFY `cu_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=116;
 --
 -- AUTO_INCREMENT for table `invoice`
 --
@@ -334,12 +343,12 @@ ALTER TABLE `registration`
 -- AUTO_INCREMENT for table `requests`
 --
 ALTER TABLE `requests`
-  MODIFY `req_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8006;
+  MODIFY `req_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8009;
 --
 -- AUTO_INCREMENT for table `service provider`
 --
 ALTER TABLE `service provider`
-  MODIFY `sp_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=214;
+  MODIFY `sp_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=215;
 --
 -- AUTO_INCREMENT for table `services`
 --
