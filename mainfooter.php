@@ -95,6 +95,10 @@
 <script src="bootstrap/js/bootstrap.min.js"></script>
 <!-- AdminLTE App -->
 <!--<script src="dist/js/app.min.js"></script>-->
+
+<!--slideshow scripts -->
+<!--scripts starts here -->
+<script type="text/javascript" src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
 <script type="text/javascript" src="DataTables/datatables.min.js"></script>
 
 <script>
@@ -112,10 +116,8 @@
 
 
 </script>
-<!--slideshow scripts -->
-    <!--scripts starts here -->
-    <script type="text/javascript" src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
-    <script type="text/javascript" src="js/slickscript.js"></script>
-    <script type="text/javascript" src="js/slick/slick.js"></script>
+<script type="text/javascript" src="js/slickscript.js"></script>
+<script type="text/javascript" src="js/slick/slick.js"></script>
 </body>
+
 </html>

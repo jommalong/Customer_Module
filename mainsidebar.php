@@ -19,19 +19,19 @@
             <li class="header">MENU</li>
             <!-- Optionally, you can add icons to the links -->
             <li class="treeview">
-                <a href="dashboard.php"><i class="fa fa-circle-o"></i><span>Dashboard</span></a>
+                <a href="dashboard.php"><i class="fa fa-dashboard"></i><span>Dashboard</span></a>
             </li>
             <li class="treeview">
                 <a href="index.php"><i class="fa fa-home"></i> <span>Home</span></a>
             </li>
             <li class="treeview">
-                <a href="services.php"><i class="fa fa-info-circle"></i> <span>Services</span></a>
+                <a href="services.php"><i class="fa fa-book"></i> <span>Services</span></a>
             </li>
             <li class="treeview">
                 <a href="profile.php"><i class="fa glyphicon glyphicon-pencil"></i> <span>Account Settings</span></a>
             </li>
             <li class="treeview">
-                <a href="#"><i class="fa glyphicon glyphicon-log-out"></i>
+                <a href="auth/logout.php"><i class="fa glyphicon glyphicon-log-out"></i>
                 <?php
                     echo "Log Out";
                 ?>

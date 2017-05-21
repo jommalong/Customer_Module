@@ -11,12 +11,12 @@
         <div class="form-group">
           <div class="row">
             <div class="col-md-6">
-              <label for="fName">First Name</label>
-              <input type="text" class="form-control" name="fName" placeholder="First name">
+              <label for="fname">First Name</label>
+              <input type="text" class="form-control" name="fname" placeholder="First name">
             </div>
             <div class="col-md-6">
-              <label for="lName">Last Name</label>
-              <input type="text" class="form-control" name="lName" placeholder="Last name">
+              <label for="lname">Last Name</label>
+              <input type="text" class="form-control" name="lname" placeholder="Last name">
             </div>
           </div>
           <div class="row">

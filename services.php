@@ -1,5 +1,5 @@
-<?php include("headernavbar.php"); ?>
-<?php include("mainsidebar.php"); ?>
+<?php require("headernavbar.php"); ?>
+<?php require("mainsidebar.php"); ?>
 
 <!-- Content Wrapper. Contains page content -->
 <div class="content-wrapper">
@@ -24,7 +24,7 @@
         //   echo $row['lname'];
         // }
         ?>
-        <table class="table table-hover data-table">
+        <table class="table table-hover data-table table-responsive">
             <thead>
             <tr>
                 <th>Service Id</th>
