@@ -3,7 +3,7 @@
     <!-- sidebar: style can be found in sidebar.less -->
     <section class="sidebar">
         <!-- search form (Optional) -->
-        <form action="results.php" method="post" class="sidebar-form">
+        <form action="results.php" method="get" class="sidebar-form">
             <div class="input-group">
                 <input type="text" name="find" class="form-control" placeholder="Search..." id="Search">
                 <span class="input-group-btn">
