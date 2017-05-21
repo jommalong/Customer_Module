@@ -14,23 +14,14 @@ function getTransactions($id)
     }
 
     $sql = "SELECT 
-    COUNT(status) 'Number of Accepted Requests',
-    
-CONCAT(`service provider`.fname,
-            `service provider`.lname) 'Service Provider'
-
-FROM
-    requests
-        NATURAL JOIN
-    customer
-        
-NATURAL JOIN
-    `service provider`
-
-WHERE
-    status = 'approved'
-        
-AND customer.username = $id";
+    *
+    FROM
+    invoice
+        inner JOIN
+    `service provider` ON invoice.sp_id = `service provider`.sp_id
+    WHERE
+    invoice.cu_id = " .$id;
+        $result = $conn->query($sql);
     $result = $conn->query($sql);
 
     // if ($result->num_rows > 0) {

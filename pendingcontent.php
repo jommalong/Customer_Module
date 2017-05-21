@@ -9,10 +9,6 @@
       <small>Optional description</small>
       <span class="glyphicon glyphicon-list-alt"></span>
     </h1>
-    <ol class="breadcrumb">
-      <li><a href="#"><i class="fa fa-dashboard"></i> Level</a></li>
-      <li class="active">Here</li>
-    </ol>
   </section>
 
   <!-- Main content -->
@@ -34,8 +30,8 @@
        <th>Last Name</th>
        <th>First Name</th>
        <th>Service Type</th>
-       <th>Timestamp</th>
-
+       <th>Date of Request</th>
+       <th>Target Date</th>
      </tr>
    </thead>
    <tbody>
@@ -45,9 +41,8 @@
         <td><?php echo $row['fname'] ?></td>
         <td><?php echo $row['lname'] ?></td>
         <td><?php echo $row['service_name'] ?></td>
-        <td><?php echo $row['date'] ?></td>
-    
-        
+        <td><?php echo $row['dateOfRequest'] ?></td>
+        <td><?php echo $row['targetDate'] ?></td>
       </tr>
     <?php endwhile ?>
 

@@ -46,8 +46,6 @@
         <td><?php echo $row['lname'] ?></td>
         <td><?php echo $row['service_name'] ?></td>
         <td><?php echo $row['date'] ?></td>
-    
-        
       </tr>
     <?php endwhile ?>
 

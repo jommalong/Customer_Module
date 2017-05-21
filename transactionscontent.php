@@ -25,28 +25,22 @@
    <table class="table table-hover data-table">
     <thead>
       <tr>
-       <th>Service Type</th>
-       <th>Status</th>
-       <th>Provider First Name</th>
-       <th>Provider Last Name</th>
-       <th>Provider username</th>
-       <th>Provider email</th>
-       <th>Contact</th>
-       <th>Amount</th>
-
-     </tr>
+        <th>Service Type</th>
+        <th>Provider First Name</th>
+        <th>Provider Last Name</th>
+        <th>Contact</th>
+        <th>Email Address</th>
+        <th>Amount</th>
    </thead>
    <tbody>
 
     <?php while ($row = $result->fetch_assoc()): ?>
       <tr>
         <td><?php echo $row['serviceAvailed'] ?></td>
-        <td><?php echo $row['status'] ?></td>
         <td><?php echo $row['fname'] ?></td>
         <td><?php echo $row['lname'] ?></td>
-        <td><?php echo $row['username'] ?></td>
-        <td><?php echo $row['email_address'] ?></td>
         <td><?php echo $row['tel_no'] ?></td>
+        <td><?php echo $row['email_address'] ?></td>
         <td><?php echo $row['total_amount'] ?></td>
       </tr>
     <?php endwhile ?>

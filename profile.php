@@ -69,13 +69,13 @@
               <input type="password" class="form-control" name="pw" placeholder="Password">
             </div>
           </div>
-          <div class="row">
-            <div class="col-md-4 col-md-offset-4">
-              <input type="submit" class="btn btn-primary form-control" name="submit" value="Update profile">
-            </div>
-          </div>
         </div>
       </form>
+      <div class="row">
+          <div class="col-md-4 col-md-offset-4">
+            <input type="submit" class="btn btn-primary form-control" name="submit" value="Update profile">
+          </div>
+      </div>
     </section>
   </div>
   <!-- /.content-wrapper -->

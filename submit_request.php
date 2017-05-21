@@ -1,6 +1,5 @@
 <?php
 
-
 $servername = "localhost";
 $username = "root";
 $password = "";
@@ -28,3 +27,5 @@ try {
 $conn = null;
 
 header('Location: services.php');
+
+?>

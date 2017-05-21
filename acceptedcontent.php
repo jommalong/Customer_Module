@@ -44,7 +44,7 @@
         <td><?php echo $row['fname'] ?></td>
         <td><?php echo $row['lname'] ?></td>
         <td><?php echo $row['service_name'] ?></td>
-        <td><?php echo $row['date'] ?></td>
+        <td><?php echo $row['targetDate'] ?></td>
     
         
       </tr>
