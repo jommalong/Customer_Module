@@ -98,8 +98,11 @@
 
 <!--slideshow scripts -->
 <!--scripts starts here -->
-<script type="text/javascript" src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+<script src="DataTables/jQuery-2.2.4"></script>
+<!--<script type="text/javascript" src="http://code.jquery.com/jquery-1.11.0.min.js"></script>-->
 <script type="text/javascript" src="DataTables/datatables.min.js"></script>
+<script src="jquery-ui/jquery-ui.min.js"></script>
+<script src="jquery-validate/jquery.validate.min.js"></script>
 
 <script>
     $(document).ready(function () {
@@ -115,6 +118,12 @@
     });
 
 
+</script>
+<script>
+    $(function () {
+        $(".datepicker").datepicker();
+    });
+    $("#request-form").validate();
 </script>
 <script type="text/javascript" src="js/slickscript.js"></script>
 <script type="text/javascript" src="js/slick/slick.js"></script>

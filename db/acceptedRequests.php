@@ -12,7 +12,7 @@ function acceptedRequests($id){
 	    die("Connection failed: " . $conn->connect_error);
 	} 
 
-	$sql = "Select * from `requests` inner join `service provider` on requests.sp_id = `service provider`.sp_id inner join `services` on requests.service_id = services.service_id where requests.status = 'Approved' and cu_id = 101";
+	$sql = "Select * from `arrangement` inner join `service provider` on requests.sp_id = `service provider`.sp_id inner join `services` on requests.service_id = services.service_id where requests.status = 'Approved' and cu_id =" . $id;
 	
 	$result = $conn->query($sql);
 

@@ -28,11 +28,13 @@ scratch. This page gets rid of all links and provides the needed markup only.
     <link rel="stylesheet" href="css/slideshow.css">
     <link rel="stylesheet" type="text/css" href="js/slick/slick.css"/>
     <link rel="stylesheet" type="text/css" href="js/slick/slick-theme.css"/>
+    <link rel="stylesheet" href="jquery-ui/jquery-ui.min.css">
+
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
-    <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
-    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <!--<script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>-->
+<!--    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>-->
     <![endif]-->
 </head>
 <!--
@@ -82,12 +84,35 @@ desired effect
             <span class="logo-lg">Welcome
       </span>
         </a>
-
-        <!-- Header Navbar -->
-        <nav class="navbar navbar-static-top" role="navigation">
+        <nav class="navbar navbar-static-top">
             <!-- Sidebar toggle button-->
-            <a href="#" class="sidebar-toggle" data-toggle="offcanvas" role="button">
+            <a href="#" class="sidebar-toggle" data-toggle="push-menu" role="button">
                 <span class="sr-only">Toggle navigation</span>
             </a>
+
+            <div class="navbar-custom-menu">
+                <ul class="nav navbar-nav">
+
+                    <li class="dropdown user user-menu">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                            <i class="glyphicon glyphicon-user"></i>
+                            <span class="hidden-xs"><?php echo $row[0] . ' ' . $row[1] ?></span>
+                        </a>
+                    </li>
+                    <!-- Control Sidebar Toggle Button -->
+
+                </ul>
+            </div>
         </nav>
+
+        <!-- Header Navbar -->
+<!--        <nav class="navbar navbar-static-top" role="navigation">-->
+<!---->
+<!--            <!-- Sidebar toggle button-->-->
+<!--            <a href="#" class="sidebar-toggle" data-toggle="offcanvas" role="button">-->
+<!--                <span class="sr-only">Toggle navigation</span>-->
+<!--            </a>-->
+<!---->
+<!--        </nav>-->
+
     </header>

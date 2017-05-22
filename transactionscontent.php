@@ -4,8 +4,7 @@
   <section class="content-header">
 
     <link rel="stylesheet" type="text/css" href="DataTables/datatables.min.css"/>
-    <h1>
-      YOUR History Transactions
+    <h1>History Transactions
       <span class="glyphicon glyphicon-list-alt"></span>
     </h1>
   </section>
@@ -15,7 +14,7 @@
    <?php 
    require('db/transactionFunctions.php');
    // TODO: // put id
-   $result = getTransactions(101); 
+   $result = getTransactions($_SESSION['cu_id']);
 
    // while($row = $result->fetch_assoc()) {
    //   echo $row['lname'];
@@ -25,8 +24,7 @@
    <table class="table table-hover data-table">
     <thead>
       <tr>
-       <th>Service Type</th>
-       <th>Status</th>
+       <th>Service </th>
        <th>Provider First Name</th>
        <th>Provider Last Name</th>
        <th>Provider username</th>
@@ -41,7 +39,6 @@
     <?php while ($row = $result->fetch_assoc()): ?>
       <tr>
         <td><?php echo $row['serviceAvailed'] ?></td>
-        <td><?php echo $row['status'] ?></td>
         <td><?php echo $row['fname'] ?></td>
         <td><?php echo $row['lname'] ?></td>
         <td><?php echo $row['username'] ?></td>

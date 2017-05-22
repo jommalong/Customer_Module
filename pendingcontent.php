@@ -4,8 +4,7 @@
   <section class="content-header">
 
     <link rel="stylesheet" type="text/css" href="DataTables/datatables.min.css"/>
-    <h1>
-      YOUR Pending Requests
+    <h1>Pending Requests
       <small>Optional description</small>
       <span class="glyphicon glyphicon-list-alt"></span>
     </h1>
@@ -20,7 +19,7 @@
    <?php 
    require('db/pendingRequests.php');
    // TODO: // put id
-   $result = pendingRequests(101); 
+   $result = pendingRequests($_SESSION['cu_id']);
 
    // while($row = $result->fetch_assoc()) {
    //   echo $row['lname'];
@@ -34,7 +33,7 @@
        <th>Last Name</th>
        <th>First Name</th>
        <th>Service Type</th>
-       <th>Timestamp</th>
+       <th>Date Requested</th>
 
      </tr>
    </thead>

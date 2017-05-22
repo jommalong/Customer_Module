@@ -39,6 +39,7 @@ if (isset($_GET['sp_id'])) {
                 <th>Service Name</th>
                 <th>Price</th>
                 <th>Description</th>
+                <th>Actions</th>
             </tr>
             </thead>
             <tbody>
@@ -51,6 +52,7 @@ if (isset($_GET['sp_id'])) {
                         <td><?php echo $row['service_name'] ?></td>
                         <td>P <?php echo $row['price'] ?></td>
                         <td><?php echo $row['description'] ?></td>
+                        <td><a href="/Customer_Module/service-show.php?service_id=<?php echo $row['service_id']?>" class="btn btn-warning">Show</a></td>
                     </tr>
 
                 <?php }
