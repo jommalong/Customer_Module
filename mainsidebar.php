@@ -5,7 +5,7 @@
         <!-- search form (Optional) -->
         <form action="results.php" method="get" class="sidebar-form">
             <div class="input-group">
-                <input type="text" name="find" class="form-control" placeholder="Search..." id="Search">
+                <input type="text" name="find" class="form-control" placeholder="Search provider..." id="Search">
                 <span class="input-group-btn">
                 <button type="submit" name="search" id="search-btn" class="btn btn-flat"><i class="fa fa-search"></i>
                 </button>

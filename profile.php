@@ -11,12 +11,8 @@
         <div class="form-group">
           <div class="row">
             <div class="col-md-6">
-              <label for="fname">First Name</label>
-              <input type="text" class="form-control" name="fname" placeholder="First name">
-            </div>
-            <div class="col-md-6">
-              <label for="lname">Last Name</label>
-              <input type="text" class="form-control" name="lname" placeholder="Last name">
+              <label for="fname">Customer Name</label>
+              <input type="text" class="form-control" name="fname" placeholder="">
             </div>
           </div>
           <div class="row">
