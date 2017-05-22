@@ -4,8 +4,7 @@
   <section class="content-header">
 
     <link rel="stylesheet" type="text/css" href="DataTables/datatables.min.css"/>
-    <h1>
-      YOUR Rejected Requests
+    <h1>Rejected Requests
       <small>Optional description</small>
       <span class="glyphicon glyphicon-list-alt"></span>
     </h1>
@@ -20,7 +19,7 @@
    <?php 
    require('db/rejectedRequests.php');
    // TODO: // put id
-   $result = rejectedRequests(101); 
+   $result = rejectedRequests($_SESSION['cu_id']);
 
    // while($row = $result->fetch_assoc()) {
    //   echo $row['lname'];

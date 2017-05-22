@@ -69,10 +69,7 @@ if (isset($_POST['request'])) {
                 </div>
                 <button class="btn btn-info">Request</button>
             </form>
-            <script>
-                document.getElementById("date");
-            </script>
-            <h3 class="page-header">Description</h3>
+            <h3 style="border-top: 1px solid gray !important; padding-top: 2%" class="page-header">Description</h3>
             <p><?php echo $service['description'] ?></p>
         <?php else: ?>
 

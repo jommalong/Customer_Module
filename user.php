@@ -53,7 +53,7 @@ if (isset($_GET['sp_id'])) {
                         <td>P <?php echo $row['price'] ?></td>
                         <td><?php echo $row['description'] ?></td>
                         <td><a href="/Customer_Module/service-show.php?service_id=<?php echo $row['service_id'] ?>"
-                               class="btn btn-warning">Show</a></td>
+                               class="btn btn-warning btn-flat btn-md">Show</a></td>
                     </tr>
 
                 <?php }

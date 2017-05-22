@@ -4,7 +4,7 @@
     <section class="content-header">
 
         <link rel="stylesheet" type="text/css" href="DataTables/datatables.min.css"/>
-        <h1>Requests
+        <h1>Pending Requests
             <small>Optional description</small>
             <span class="glyphicon glyphicon-list-alt"></span>
         </h1>
@@ -34,7 +34,6 @@
                 <th>Service Name</th>
                 <th>Date Requested</th>
                 <th>Appointment Date</th>
-                <th>Status</th>
             </tr>
             </thead>
             <tbody>
@@ -46,7 +45,6 @@
                     <td><?php echo $row['service_name'] ?></td>
                     <td><?php echo $row['date'] ?></td>
                     <td><?php echo $row['targetDate'] ?></td>
-                    <td><?php echo $row['status'] ?></td>
 
 
                 </tr>

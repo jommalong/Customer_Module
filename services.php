@@ -3,20 +3,20 @@
 
 <!-- Content Wrapper. Contains page content -->
 <div class="content-wrapper">
-        <!--date picker-->
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>jQuery UI Datepicker - Default functionality</title>
-        <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
-        <link rel="stylesheet" href="/resources/demos/style.css">
-        <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
-        <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-        <script>
-        $( function() {
-            $( "#datepicker" ).datepicker();
-        } );
-          </script>
-          <!--date picker-->
+    <!--date picker-->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>jQuery UI Datepicker - Default functionality</title>
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <link rel="stylesheet" href="/resources/demos/style.css">
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script>
+        $(function () {
+            $("#datepicker").datepicker();
+        });
+    </script>
+    <!--date picker-->
     <!-- Content Header (Page header) -->
     <section class="content-header">
 
@@ -68,35 +68,11 @@
                     <td><?php echo $row['tel_no'] ?></td>
                     <td><?php echo $row['price'] ?></td>
                     <td>
-                        <form action="submit_request.php" method="post" role="form">
-                            
-                            <input type="hidden" name="sp_id" value="<?php echo $row['sp_id'] ?>">
-                            <input type="hidden" name="cu_id" value="<?php echo $cu_id ?>">
-                            <input type="hidden" name="service_id" value="<?php echo $row['service_id'] ?>">
-                            <input type="hidden" name="date" value="<?php echo date('Y-m-d') ?>">
-                            <input type="hidden" name="status" value="Pending">
-                                <div>
-                                    <!--<input type="date" class="form-control" name="date" placeholder="">-->
-                                    <input name="date" type="text" id="datepicker">
-                                </div>
-                                <div>
-                                    <input type="submit" name="submitRequest" placeholder="Submit Request" class="btn btn-primary form-control">
-                                </div>
-                        </form>
+                        <a href="service-show.php?service_id=<?php echo $row['service_id'] ?>"
+                           class="btn btn-warning btn-flat">Show</a>
                     </td>
                 </tr>
             <?php endwhile ?>
-
-            <?php 
-                if($sql){
-                    echo "<script> alert('Request Successful'); </script>";
-                                
-                }else{    
-                    echo "<script> alert('Request Failed'); </script>.";
-                                
-                }
-                exit;  
-                     ?>
             </tbody>
         </table>
 
