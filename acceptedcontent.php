@@ -25,16 +25,16 @@
         //   echo $row['lname'];
         // }
         ?>
-        <h3> Arrangements </h3>
         <?php if ($result): ?>
             <table class="table table-hover data-table">
                 <thead>
                 <tr>
 
-                    <th>Last Name</th>
-                    <th>First Name</th>
-                    <th>Service Type</th>
-                    <th>Timestamp</th>
+                    <th>Provider Last Name</th>
+                    <th>Provider First Name</th>
+                    <th>Service Name</th>
+                    <th>Contact</th>
+                    <th>Appointment Date</th>
 
                 </tr>
                 </thead>
@@ -45,6 +45,7 @@
                         <td><?php echo $row['fname'] ?></td>
                         <td><?php echo $row['lname'] ?></td>
                         <td><?php echo $row['service_name'] ?></td>
+                        <td><?php echo $row['tel_no'] ?></td>
                         <td><?php echo $row['targetDate'] ?></td>
 
 

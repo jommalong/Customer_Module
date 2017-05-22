@@ -13,7 +13,7 @@ function pendingRequests($id)
         die("Connection failed: " . $conn->connect_error);
     }
 
-    $sql = "Select * from `requests` inner join `service provider` on requests.sp_id = `service provider`.sp_id inner join `services` on requests.service_id = services.service_id where requests.status = 'Pending' and cu_id =" . $id;
+    $sql = "Select * from `requests` inner join `service provider` on requests.sp_id = `service provider`.sp_id inner join `services` on requests.service_id = services.service_id where cu_id =" . $id;
     $result = $conn->query($sql);
 
     // if ($result->num_rows > 0) {

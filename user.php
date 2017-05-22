@@ -52,13 +52,16 @@ if (isset($_GET['sp_id'])) {
                         <td><?php echo $row['service_name'] ?></td>
                         <td>P <?php echo $row['price'] ?></td>
                         <td><?php echo $row['description'] ?></td>
-                        <td><a href="/Customer_Module/service-show.php?service_id=<?php echo $row['service_id']?>" class="btn btn-warning">Show</a></td>
+                        <td><a href="/Customer_Module/service-show.php?service_id=<?php echo $row['service_id'] ?>"
+                               class="btn btn-warning">Show</a></td>
                     </tr>
 
                 <?php }
-            } else {
-                echo "<p style='color:  red'>There are no services yet for this provider</p>";
-            }
+            } else { ?>
+                <div class="alert alert-warning">
+                     There are no services yet for this provider.
+                </div>
+            <?php }
             ?>
             </tbody>
         </table>

@@ -10,7 +10,7 @@ if (isset($_POST['request'])) {
     $sp_id = $_POST['sp_id'];
     $date = date_create($_POST['date'])->format('Y-m-d');
     $cu_id = $_SESSION['cu_id'];
-    $sql = "INSERT INTO `arrangement`(`cu_id`, `sp_id`, `service_id`, `date`, `targetDate`) VALUES ($cu_id,$sp_id,$service_id, date(now()), '$date')";
+    $sql = "INSERT INTO `requests`(`cu_id`, `sp_id`, `service_id`, `date`, `targetDate`) VALUES ($cu_id,$sp_id,$service_id, date(now()), '$date')";
     $success = $conn->query($sql);
 } else {
 
