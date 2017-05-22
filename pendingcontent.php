@@ -25,7 +25,6 @@
         //   echo $row['lname'];
         // }
         ?>
-        <h3> Invoices </h3>
         <table class="table table-hover data-table">
             <thead>
             <tr>
@@ -34,6 +33,7 @@
                 <th>First Name</th>
                 <th>Service Name</th>
                 <th>Date Requested</th>
+                <th>Appointment Date</th>
                 <th>Status</th>
             </tr>
             </thead>
@@ -45,6 +45,7 @@
                     <td><?php echo $row['lname'] ?></td>
                     <td><?php echo $row['service_name'] ?></td>
                     <td><?php echo $row['date'] ?></td>
+                    <td><?php echo $row['targetDate'] ?></td>
                     <td><?php echo $row['status'] ?></td>
 
 

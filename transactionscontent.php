@@ -33,6 +33,7 @@
        <th>Amount</th>
 
      </tr>
+
    </thead>
    <tbody>
 
@@ -41,9 +42,8 @@
         <td><?php echo $row['serviceAvailed'] ?></td>
         <td><?php echo $row['fname'] ?></td>
         <td><?php echo $row['lname'] ?></td>
-        <td><?php echo $row['username'] ?></td>
-        <td><?php echo $row['email_address'] ?></td>
         <td><?php echo $row['tel_no'] ?></td>
+        <td><?php echo $row['email_address'] ?></td>
         <td><?php echo $row['total_amount'] ?></td>
       </tr>
     <?php endwhile ?>
